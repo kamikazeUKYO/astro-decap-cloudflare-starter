@@ -20,18 +20,17 @@
 
 backend:
   name: github
-  repo: "YOUR_GH_USER/YOUR_REPO"
+  repo: "kamikazeUKYO/astro-decap-cloudflare-starter"   # ← あなたのリポジトリ
   branch: main
-  base_url: "https://YOUR-WORKER.workers.dev"
+  base_url: "https://<あなたのOAuth-Worker名>.workers.dev"  # ← 作成後に実URLを入れる
   auth_endpoint: "/auth"
 
-site_url: "https://xxxxx.pages.dev"
+site_url: "https://astro-decap-cloudflare-starter.pages.dev/"
 
 media_folder: "public/images/uploads"
 public_folder: "/images/uploads"
 
 collections:
-  # 固定ページ
   - name: "pages"
     label: "固定ページ"
     folder: "src/pages/pages"
@@ -41,7 +40,6 @@ collections:
       - { label: "タイトル", name: "title", widget: "string" }
       - { label: "本文", name: "body", widget: "markdown" }
 
-  # ブログ
   - name: "posts"
     label: "ブログ"
     folder: "src/pages/blog"
@@ -50,5 +48,4 @@ collections:
     fields:
       - { label: "タイトル", name: "title", widget: "string" }
       - { label: "公開日", name: "pubDate", widget: "datetime" }
-      - { label: "タグ", name: "tags", widget: "list", required: false }
       - { label: "本文", name: "body", widget: "markdown" }
