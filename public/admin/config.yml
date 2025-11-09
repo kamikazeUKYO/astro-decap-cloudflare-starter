@@ -20,9 +20,9 @@
 
 backend:
   name: github
-  repo: "kamikazeUKYO/astro-decap-cloudflare-starter"   # ← あなたのリポジトリ
+  repo: "kamikazeUKYO/astro-decap-cloudflare-starter"
   branch: main
-  base_url: "https://decap-oauth-ukyo.snakesnake1981.workers.dev"  # ← 作成後に実URLを入れる
+  base_url: "https://decap-oauth-ukyo.snakesnake1981.workers.dev"
   auth_endpoint: "/auth"
 
 site_url: "https://astro-decap-cloudflare-starter.pages.dev"
@@ -49,3 +49,4 @@ collections:
       - { label: "タイトル", name: "title", widget: "string" }
       - { label: "公開日", name: "pubDate", widget: "datetime" }
       - { label: "本文", name: "body", widget: "markdown" }
+
