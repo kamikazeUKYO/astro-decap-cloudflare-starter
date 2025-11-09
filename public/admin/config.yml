@@ -22,7 +22,7 @@ backend:
   name: github
   repo: "kamikazeUKYO/astro-decap-cloudflare-starter"   # ← あなたのリポジトリ
   branch: main
-  base_url: "https://<あなたのOAuth-Worker名>.workers.dev"  # ← 作成後に実URLを入れる
+  base_url: "https://decap-oauth-ukyo.snakesnake1981.workers.dev/"  # ← 作成後に実URLを入れる
   auth_endpoint: "/auth"
 
 site_url: "https://astro-decap-cloudflare-starter.pages.dev/"
