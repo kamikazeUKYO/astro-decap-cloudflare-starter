@@ -54,7 +54,7 @@ backend:
   name: git-gateway
   branch: main
 
-site_url: "https://marvelous-rabanadas-8ccb36.netlify.app/"
+site_url: "https://marvelous-rabanadas-8ccb36.netlify.app"
 
 media_folder: "public/images/uploads"
 public_folder: "/images/uploads"
