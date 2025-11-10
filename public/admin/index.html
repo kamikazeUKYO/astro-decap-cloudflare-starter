@@ -16,13 +16,34 @@
 <!doctype html>
 <html>
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="robots" content="noindex">
-  <title>Content Manager</title>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width" />
+  <title>CMS</title>
+
+  <!-- Netlify Identity widget（招待リンク/ログイン処理に必須） -->
+  <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
 </head>
 <body>
-  <!-- Decap CMS 最新版 -->
-  <script src="https://unpkg.com/decap-cms@^3.3.3/dist/decap-cms.js"></script>
+  <!-- Decap CMS 本体 -->
+  <script src="https://unpkg.com/decap-cms@^3/dist/decap-cms.js"></script>
+
+  <script>
+    // 招待リンク（#invite_token=...）を /admin で開いた時にサインアップを表示
+    if (window.netlifyIdentity) {
+      netlifyIdentity.on('init', (user) => {
+        const hasInvite = /invite_token/.test(window.location.hash || "");
+        if (!user && hasInvite) {
+          // サインアップモーダルを開く
+          netlifyIdentity.open('signup');
+          // サインアップ/ログインが完了したら /admin に遷移（ハッシュを消す）
+          netlifyIdentity.on('login', () => {
+            window.location.replace('/admin/');
+          });
+        }
+      });
+      netlifyIdentity.init();
+    }
+  </script>
 </body>
 </html>
+
