@@ -18,14 +18,43 @@
 #       - { label: "Title", name: "title", widget: "string" }
 #       - { label: "Body", name: "body", widget: "markdown" }
 
-backend:
-  name: github
-  repo: "kamikazeUKYO/astro-decap-cloudflare-starter"
-  branch: main
-  base_url: "https://decap-oauth-ukyo.snakesnake1981.workers.dev"
-  auth_endpoint: "/auth"
+# backend:
+#   name: github
+#   repo: "kamikazeUKYO/astro-decap-cloudflare-starter"
+#   branch: main
+#   base_url: "https://decap-oauth-ukyo.snakesnake1981.workers.dev"
+#   auth_endpoint: "/auth"
 
-site_url: "https://astro-decap-cloudflare-starter.pages.dev"
+# site_url: "https://astro-decap-cloudflare-starter.pages.dev"
+
+# media_folder: "public/images/uploads"
+# public_folder: "/images/uploads"
+
+# collections:
+#   - name: "pages"
+#     label: "固定ページ"
+#     folder: "src/pages/pages"
+#     create: true
+#     slug: "{{slug}}"
+#     fields:
+#       - { label: "タイトル", name: "title", widget: "string" }
+#       - { label: "本文", name: "body", widget: "markdown" }
+
+#   - name: "posts"
+#     label: "ブログ"
+#     folder: "src/pages/blog"
+#     create: true
+#     slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
+#     fields:
+#       - { label: "タイトル", name: "title", widget: "string" }
+#       - { label: "公開日", name: "pubDate", widget: "datetime" }
+#       - { label: "本文", name: "body", widget: "markdown" }
+
+backend:
+  name: git-gateway
+  branch: main
+
+site_url: "https://marvelous-rabanadas-8ccb36.netlify.app/"
 
 media_folder: "public/images/uploads"
 public_folder: "/images/uploads"
